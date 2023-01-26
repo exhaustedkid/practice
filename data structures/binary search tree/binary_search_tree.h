@@ -1,10 +1,19 @@
 #pragma once
 
 #include <cstdio>
+#include <initializer_list>
 
 template<typename T>
 class BinarySearchTree {
  public:
+  BinarySearchTree() = default;
+
+  BinarySearchTree(std::initializer_list<T> list) {
+    for (auto val : list) {
+      insert(val);
+    }
+  }
+
   [[nodiscard]] size_t size() const {
     return size_;
   }
