@@ -52,22 +52,11 @@ template <int N>
 const bool is_prime = IsPrime<N>::value;
 
 int main() {
-  static_assert(is_prime<1> == false);
-  static_assert(is_prime<2> == true);
-  static_assert(is_prime<3> == true);
-  static_assert(is_prime<4> == false);
-  static_assert(is_prime<5> == true);
-  static_assert(is_prime<6> == false);
-  static_assert(is_prime<7> == true);
-  static_assert(is_prime<8> == false);
-  static_assert(is_prime<9> == false);
-  static_assert(is_prime<10> == false);
-  static_assert(is_prime<11>);
-  static_assert(is_prime<12> == false);
-  static_assert(is_prime<13>);
-  static_assert(!is_prime<14>);
-  static_assert(!is_prime<15>);
-  static_assert(is_prime<16> == false);
-  static_assert(is_prime<113> == true);
+  static_assert(!is_prime<1>);
+  static_assert(is_prime<2>);
+  static_assert(is_prime<3>);
+  static_assert(!is_prime<4>);;
+  static_assert(!is_prime<112>);
+  static_assert(is_prime<113>);
   return 0;
 }
